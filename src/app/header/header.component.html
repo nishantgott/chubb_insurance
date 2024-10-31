@@ -1,0 +1,123 @@
+<header class="flex justify-between items-center pt-2 pb-0 mx-6 space-x-6">
+
+    <div class="flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-10 h-10  hover:cursor-pointer">
+            <path fill="#4285F4"
+                d="M24 9.5c2.08 0 3.96.72 5.45 1.91l4.08-4.08C30.91 5.59 27.65 4 24 4 15.82 4 9.06 9.9 7.1 17.5h5.52C14.3 13.31 18.76 9.5 24 9.5z" />
+            <path fill="#34A853"
+                d="M9.1 19.93C8.4 21.88 8 23.9 8 26s.4 4.12 1.1 6.07l5.52-4.2C13.97 25.75 13.5 25 13.5 24s.47-1.75 1.12-2.87L9.1 19.93z" />
+            <path fill="#FBBC05"
+                d="M24 38.5c-2.67 0-5.16-.89-7.12-2.37l-5.5 4.2C14.94 43.27 19.19 46 24 46c4.7 0 8.91-1.77 12.15-4.67l-5.34-4.13c-1.73 1.14-3.85 1.8-6.16 1.8z" />
+            <path fill="#EA4335"
+                d="M41.86 20H24v8h10.22c-1.04 2.65-3.21 4.55-6.01 5.09l5.34 4.13C36.99 34.9 40 30.81 40 26c0-1.09-.13-2.17-.33-3.18l-5.34-4.13c.13.68.2 1.39.2 2.13 0 3.23-1.7 6.14-4.34 7.87l5.33 4.13C39.55 30.7 42 28.4 42 26c0-3.77-1.97-7.04-5.14-8.77l5.34-4.13c1.63 1.68 3.08 4.1 3.08 6.9 0 1.2-.21 2.4-.42 3.6h-.42l-3.08-4.6z" />
+        </svg>
+
+    </div>
+
+
+    <div class="flex items-center">
+        <input type="text" placeholder="Search here..."
+            class="border-b-2 border-gray-200 focus:border-teal-600 text-gray-600 outline-none py-1" />
+    </div>
+
+
+    <nav class="flex space-x-6 ml-auto text-gray-1200 font-semibold">
+        <a href="#" class="text-teal-600 font-semibold">Home</a>
+        <div class="relative">
+            <button (click)="toggleDropdown()" class="text-gray-800 hover:text-teal-600 focus:outline-none">
+                <div class="flex items-center cursor-pointer">
+                    <span>Pages</span>
+                    <svg *ngIf="!isDropdownOpen" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                          c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                          s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                    </svg>
+                    <svg *ngIf="isDropdownOpen" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                        l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                        C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" />
+                    </svg>
+                </div>
+            </button>
+            <div *ngIf="isDropdownOpen" class="absolute bg-white border border-gray-200 rounded-lg mt-2 w-32 shadow-lg">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">First page</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Second page</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Third page</a>
+            </div>
+        </div>
+        <div class="relative">
+            <button (click)="toggleDropdown2()"
+                class="flex items-center text-gray-800 hover:text-teal-600 focus:outline-none">
+                <span>Insurances</span>
+                <svg *ngIf="!isDropdownOpen2" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                      c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                      s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                </svg>
+                <svg *ngIf="isDropdownOpen2" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                      l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                      C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" />
+                </svg>
+            </button>
+
+            <div *ngIf="isDropdownOpen2"
+                class="absolute bg-white border border-gray-200 rounded-lg mt-2 w-32 shadow-lg">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">First insurance</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Second insurance</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Third insurance</a>
+            </div>
+        </div>
+
+        <div class="relative">
+            <button (click)="toggleDropdown3()"
+                class="flex items-center text-gray-800 hover:text-teal-600 focus:outline-none">
+                <span>Blogs</span>
+                <svg *ngIf="!isDropdownOpen3" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                      c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                      s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                </svg>
+                <svg *ngIf="isDropdownOpen3" fill="currentColor" class="w-4 h-4 ml-1" viewBox="0 0 330 330"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394
+                      l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393
+                      C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z" />
+                </svg>
+            </button>
+
+            <div *ngIf="isDropdownOpen3"
+                class="absolute bg-white border border-gray-200 rounded-lg mt-2 w-32 shadow-lg">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">First blog</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Second blog</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-teal-100">Third blog</a>
+            </div>
+        </div>
+
+        <a href="#" class="hover:text-teal-600">Contact Us</a>
+    </nav>
+
+    <div class="flex items-center space-x-5">
+        <div class="hidden md:flex items-center text-gray-700">
+            <img src="assets/phone-icon-circle-teal-kl6c1q4r5iuvmukk.png" alt="phone icon"
+                class="w-6 h-6 mr-2 hover:cursor-pointer" />
+            <span>+(111) 458 856</span>
+        </div>
+        <button class="bg-teal-600 text-white px-4 py-2 hover:bg-teal-500 rounded-md">
+            Get A Quote
+        </button>
+        <svg class="w-6 h-6 text-gray-700 hover:cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </div>
+
+</header>
